@@ -24,8 +24,11 @@ java -jar ysoserial-for-woodpecker-<version>.jar -g CommonsBeanutils1 -a "class_
 
 ## 说明
 1.FileSplitPlugin文件分片
+
 2.GetTempLoad读取tmp目录下的文件合并，加载class测试分块文件完整使用
+
 3.GenerateBlockClassTmpPlugin动态生成分块与合并class加载执行，写分块文件到tmp中
+
 4.与3功能一致，可指定写入分块的路径，用于已知路径写入，推荐使用3
 
 在Windows下路径使用`/`,否则在javassist会报错。
