@@ -28,8 +28,7 @@ java -jar ysoserial-for-woodpecker-<version>.jar -g CommonsBeanutils1 -a "class_
 3.GenerateBlockClassTmpPlugin动态生成分块与合并class加载执行，写分块文件到tmp中
 4.与3功能一致，可指定写入分块的路径，用于已知路径写入，推荐使用3
 
-在Windows下路径使用`/`,否则在javassist会报错
-在MAC中生成测试发现，Mac中插件目录默认会生成一个`.DS_Store`文件会导致合并数据时，数据损坏
+在Windows下路径使用`/`,否则在javassist会报错。
 
 
 ## 使用
