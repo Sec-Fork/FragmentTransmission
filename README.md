@@ -1,4 +1,4 @@
-# 分块传输插件
+# Woodpecker分块传输插件-FragmentTransmission
 ![img.png](img.png)
 ## 功能介绍
 1. 一键生成将文件分片
