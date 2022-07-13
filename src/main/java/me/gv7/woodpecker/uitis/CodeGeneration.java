@@ -130,6 +130,7 @@ public class CodeGeneration {
         byte[] bytes = ctClass3.toBytecode();
         String filepath ="MergeByNameCode.class";
         FileStore(OutClassFilePath+filepath,bytes);
+        ctClass3.defrost();
 //        File file  = new File(OutClassFilePath+filepath);
 //
 //        FileOutputStream fos = new FileOutputStream(file);
@@ -154,6 +155,7 @@ public class CodeGeneration {
         }
 
         ClassPool pool = ClassPool.getDefault();
+
         pool.insertClassPath(new ClassClassPath(this.getClass()));
         CtClass ctClass3 = pool.makeClass("MergeByNameCode1");
         CtConstructor ctConstructor = ctClass3.makeClassInitializer();
@@ -207,7 +209,7 @@ public class CodeGeneration {
         String filepath ="MergeByNameCode1.class";
 
         FileStore(OutClassFilePath+filepath,bytes);
-
+        ctClass3.defrost();
 
 
     }
@@ -232,7 +234,7 @@ public class CodeGeneration {
         byte[] bytes = ctClass3.toBytecode();
         String filepath ="CreateFile.class";
         FileStore(OutFilePath+filepath,bytes);
-
+        ctClass3.defrost();
 
 
     }
@@ -249,7 +251,7 @@ public class CodeGeneration {
         byte[] bytes = ctClass3.toBytecode();
         String filepath ="CreateFilePath.class";
         FileStore(OutFilePath+filepath,bytes);
-
+        ctClass3.defrost();
 //        File file  = new File(filepath);
 //
 //        FileOutputStream fos = new FileOutputStream(file);
@@ -305,9 +307,6 @@ public class CodeGeneration {
         str_temp += file.substring(start).replaceAll("\r\\n|\\n","");
         map.put(i,str_temp);
 
-
-
-
 //        File file_class_dir = new File(tmp_Class_Path);
 //        if (!file_class_dir.exists()){
 //            file_class_dir.mkdirs();
@@ -336,7 +335,7 @@ public class CodeGeneration {
 //            File file2  = new File(filepath);
 //            File file1  = new File(tmp_Class_Path+filepath);
             FileStore(OutFilePath+filepath,bytes);
-
+            ctClass3.defrost();
 
 
 
@@ -412,7 +411,7 @@ public class CodeGeneration {
 //            fos.close();
             FileStore(filepath,bytes);
 
-
+            ctClass3.defrost();
 
 
         }
@@ -493,6 +492,7 @@ public class CodeGeneration {
             bytes = ctClass3.toBytecode();
             String filepath ="FileloaderInvokeFIlename.class";
             FileStore(OutFilePath+filepath,bytes);
+            ctClass3.defrost();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
