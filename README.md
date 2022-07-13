@@ -20,6 +20,8 @@ java -jar ysoserial-for-woodpecker-<version>.jar -g CommonsBeanutils1 -a "class_
 ```
 测试发现BCEL没办法加载动态生成的Class
 
+如需封装成漏洞POC工具自行修改
+
 ## 说明
 1.FileSplitPlugin文件分片
 2.GetTempLoad读取tmp目录下的文件合并，加载class测试分块文件完整使用
